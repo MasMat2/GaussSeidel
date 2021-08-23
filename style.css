@@ -1,0 +1,21 @@
+#initial{
+    padding-bottom: 3em;
+}
+
+input[type="text"]{
+    width: 2em;
+}
+
+.equation{
+    margin-bottom: 1em;
+}
+
+.error-column{
+    background-color: yellow;
+}
+
+.container-2{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
