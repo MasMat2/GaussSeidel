@@ -1,21 +1,49 @@
-#initial{
-    padding-bottom: 3em;
+body {
+  color: white;
+  background-color: rgb(0, 20, 19);
 }
 
-input[type="text"]{
-    width: 2em;
+th {
+  position: absolute;
 }
 
-.equation{
-    margin-bottom: 1em;
+td {
+  text-align: center;
 }
 
-.error-column{
-    background-color: yellow;
+input[type="text"] {
+  color: white;
+  width: 2em;
+  border: 0px;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  outline: none;
 }
 
-.container-2{
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
+input[type="submit"] {
+  margin-bottom: 2em;
+}
+
+#initial {
+  padding-bottom: 3em;
+}
+
+#table-container {
+  width: 50%;
+  height: 150px;
+  overflow: auto;
+}
+.equation {
+  margin-bottom: 1em;
+}
+
+.error-column {
+  color: yellow;
+  /* background-color: yellow; */
+}
+
+.container-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
 }

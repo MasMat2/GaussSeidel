@@ -1,4 +1,12 @@
-window.onload = set_problem_values;
+window.onload =  function(){
+                n = 3;
+                if(n == 3){
+                    set_problem_values();
+                    createTable();
+                }
+}
+
+function create_inputs(){}
 
 function set_problem_values() {
     coef = [
@@ -98,15 +106,17 @@ function createTable() {
         cof: [],
         new_v: [],
         thead: `<table style="width:100%">
-        <tr>
-            <th>iteracion</th>
-            <th>x<sub>1</sub></th>
-            <th>x<sub>2</sub></th>
-            <th>x<sub>3</sub></th>
-            <th class="error-column">error x<sub>1</sub></th>
-            <th class="error-column">error x<sub>2</sub></th>
-            <th class="error-column">error x<sub>3</sub></th>
-        </tr>`,
+        <thead>
+            <tr>
+                <th>iteracion</th>
+                <th>x<sub>1</sub></th>
+                <th>x<sub>2</sub></th>
+                <th>x<sub>3</sub></th>
+                <th class="error-column">error x<sub>1</sub></th>
+                <th class="error-column">error x<sub>2</sub></th>
+                <th class="error-column">error x<sub>3</sub></th>
+            </tr>
+        </thead>`,
         trow: ``,
         ttail: `</table>`,
         get_table: function () {
