@@ -18,6 +18,7 @@ function update_dimensions(element) {
     if (dimensions > 1) {
       dimensions -= 1;
     }
+    
   } else if (element.value == "+") {
     dimensions += 1;
   }
@@ -180,7 +181,7 @@ function createTable() {
         for(i of Array.from(Array(dimensions+1).keys()).slice(1)){
             columns += `<th class="error-column">error x<sub>${i}</sub></th>`
         }
-        
+
         this.thead = `<table style="width:100%">
         <thead>
             <tr>
