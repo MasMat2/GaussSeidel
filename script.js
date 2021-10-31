@@ -6,7 +6,9 @@ window.onload =  function(){
                 }
 }
 
-function create_inputs(){}
+function create_inputs(){
+    dim = 3;
+}
 
 function set_problem_values() {
     coef = [
