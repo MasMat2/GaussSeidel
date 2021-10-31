@@ -3,8 +3,10 @@ body {
   background-color: rgb(0, 20, 19);
 }
 
-th {
-  position: absolute;
+thead th {
+  background-color: rgb(0, 20, 19);
+  position: sticky;
+  top: 0;
 }
 
 td {
@@ -30,8 +32,12 @@ input[type="submit"] {
 
 #table-container {
   width: 50%;
-  height: 150px;
-  overflow: auto;
+  /* height: 50vh;  filled remaining space dynamicly */
+  overflow-x: auto;
+}
+
+#error{
+  padding-left: 3em;
 }
 .equation {
   margin-bottom: 1em;
@@ -39,11 +45,10 @@ input[type="submit"] {
 
 .error-column {
   color: yellow;
-  /* background-color: yellow; */
 }
 
 .container-2 {
   display: flex;
-  justify-content: space-between;
-  width: 30%;
+  justify-content: left;
+  /* width: 30%; */
 }
