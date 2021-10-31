@@ -18,7 +18,7 @@ function update_dimensions(element) {
     if (dimensions > 1) {
       dimensions -= 1;
     }
-    
+
   } else if (element.value == "+") {
     dimensions += 1;
   }
@@ -150,7 +150,10 @@ function iterate_method(dis, _class) {
             ${create_rows(dis.new_v, (_class = ""))}
             ${create_rows(errors, (_class = "error_column"))}
         </tr>`;
-  } while (more_than_target_error());
+  } while (more_than_target_error() && n_iteration<=100);
+  if(n_iteration>100){
+      alert("El método no alcanzo su error objetivo en 100 iteraciones")
+  }
 }
 
 function createTable() {
