@@ -31,7 +31,7 @@ input[type="submit"] {
 }
 
 #table-container {
-  width: 50%;
+  width: 80%;
   /* height: 50vh;  filled remaining space dynamicly */
   overflow-x: auto;
 }

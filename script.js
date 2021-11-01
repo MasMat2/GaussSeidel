@@ -124,26 +124,20 @@ function iterate_method(dis, _class) {
 
   dis.new_v = dis.old_v.slice();
 
+  // Loop de iteraciones
   n_iteration = 1;
   do {
     errors = [];
     for (i = 0; i < dimensions; i++) {
-      //   dis.new_v[i] =
-      //     (dis.cof[i][3] -
-      //       dis.cof[i][(i + 1) % 3] * dis.new_v[(i + 1) % 3] -
-      //       dis.cof[i][(i + 2) % 3] * dis.new_v[(i + 2) % 3]) /
-      //     dis.cof[i][i];
-      // Dynamic
       products = 0;
       for(j of Array.from(Array(dimensions).keys()).slice(1)){
-          console.log(j)
         products += dis.cof[i][(i + j) % dimensions] * dis.new_v[(i + j) % dimensions];
       }
-      console.log(products);
       dis.new_v[i] = (dis.cof[i][dimensions] - products) / dis.cof[i][i];
       errors.push(Math.abs((dis.new_v[i] - dis.old_v[i]) / dis.new_v[i]));
     }
     dis.old_v = dis.new_v.slice();
+    // Anadir resultados de la iteracion a la tabla
     dis.trow += `
         <tr>
             <td>${n_iteration++}</td>
